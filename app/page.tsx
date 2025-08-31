@@ -1,6 +1,6 @@
 import { Container, Stack } from '@mantine/core';
-import { Heading } from '@/components/SiteContent/Heading/Heading';
-import { Board } from '../components/SiteContent/TicTacToe/Board';
+import { Heading } from '@/components/UI/Heading';
+import { Board } from '../components/Game/Board';
 
 export default function HomePage() {
   const heading = {

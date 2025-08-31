@@ -1,5 +1,5 @@
 import { Center, Code, Container, Divider, Stack, Text, Title } from '@mantine/core';
-import { Heading } from '@/components/SiteContent/Heading/Heading';
+import { Heading } from '@/components/UI/Heading';
 
 export default function AboutPage() {
   const heading = {

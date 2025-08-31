@@ -1,17 +1,24 @@
 import '@mantine/core/styles.css';
 
 import React from 'react';
+import { Inter } from 'next/font/google';
 import { ColorSchemeScript, mantineHtmlProps } from '@mantine/core';
-import { AppFrame } from '../components/AppFrame/AppFrame';
+import { AppFrame } from '../components/Layout/AppFrame';
+
+const inter = Inter({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-inter',
+});
 
 export const metadata = {
-  title: 'Mantine Next.js template',
-  description: 'I am using Mantine with Next.js!',
+  title: 'TicTacToe Game',
+  description: 'A modern TicTacToe game built with Next.js and Mantine',
 };
 
 export default function RootLayout({ children }: { children: any }) {
   return (
-    <html lang="en" {...mantineHtmlProps}>
+    <html lang="en" className={inter.variable} {...mantineHtmlProps}>
       <head>
         <ColorSchemeScript />
         <link rel="shortcut icon" href="/favicon.svg" />

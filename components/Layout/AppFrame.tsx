@@ -2,9 +2,9 @@
 
 import React from 'react';
 import { AppShell, MantineProvider } from '@mantine/core';
+import { SiteFooter } from '@/components/Layout/SiteFooter';
+import { SiteHeader } from '@/components/Layout/SiteHeader';
 import { theme } from '../../theme';
-import { SiteFooter } from '../SiteFooter/SiteFooter';
-import { SiteHeader } from '../SiteHeader/SiteHeader';
 
 export function AppFrame({ children }: { children: React.ReactNode }) {
   return (
