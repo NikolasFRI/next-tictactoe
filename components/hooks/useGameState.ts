@@ -1,11 +1,11 @@
-import { useState, useCallback } from 'react';
+import { useState } from 'react';
 
 export function useGameState() {
   const [squares, setSquares] = useState<(string | null)[]>(Array(9).fill(null));
   const [xIsNext, setXIsNext] = useState(true);
   const [gameOver, setGameOver] = useState(false);
 
-  const calculateWinner = useCallback((squares: (string | null)[]) => {
+  const calculateWinner = (squares: (string | null)[]) => {
     const lines = [
       [0, 1, 2],
       [3, 4, 5],
@@ -24,9 +24,9 @@ export function useGameState() {
       }
     }
     return null;
-  }, []);
+  };
 
-  const handleClick = useCallback((i: number) => {
+  const takeTurn = (i: number) => {
     if (squares[i] || gameOver) return;
     
     const newSquares = squares.slice();
@@ -38,13 +38,13 @@ export function useGameState() {
     if (winner || newSquares.every((square) => square !== null)) {
       setGameOver(true);
     }
-  }, [squares, xIsNext, gameOver, calculateWinner]);
+  };
 
-  const resetGame = useCallback(() => {
+  const resetGame = () => {
     setSquares(Array(9).fill(null));
     setXIsNext(true);
     setGameOver(false);
-  }, []);
+  };
 
   const winner = calculateWinner(squares);
   const isDraw = !winner && squares.every((square) => square !== null);
@@ -55,7 +55,7 @@ export function useGameState() {
     gameOver,
     winner,
     isDraw,
-    handleClick,
+    takeTurn,
     resetGame,
   };
 }
