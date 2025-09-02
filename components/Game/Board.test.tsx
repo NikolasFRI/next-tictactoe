@@ -14,8 +14,16 @@ jest.mock('@/components/hooks/useGameState', () => ({
 
 jest.mock('@/components/Game', () => ({
   GameStatus: () => <div data-testid="mock-status">GameStatus</div>,
-  GameSquare: () => <button data-testid={'mock-square'}>GameSquare</button>,
-  GameControls: () => <button data-testid="mock-controls">GameControls</button>,
+  GameSquare: () => (
+    <button type="button" data-testid="mock-square">
+      GameSquare
+    </button>
+  ),
+  GameControls: () => (
+    <button type="button" data-testid="mock-controls">
+      GameControls
+    </button>
+  ),
 }));
 
 describe('Board', () => {

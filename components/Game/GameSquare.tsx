@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Grid } from '@mantine/core';
+import { Button } from '@mantine/core';
 
 interface GameSquareProps {
   value: string | null;
@@ -22,7 +22,7 @@ export function GameSquare({ value, index, onClick, disabled }: GameSquareProps)
       }}
       onClick={() => onClick(index)}
       disabled={disabled}
-      data-testid={`square`}
+      data-testid="square"
     >
       {value}
     </Button>

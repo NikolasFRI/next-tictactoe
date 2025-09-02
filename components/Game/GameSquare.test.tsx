@@ -26,7 +26,7 @@ describe('GameSquare', () => {
   });
 
   it('disables the square when the disabled prop is true', () => {
-    render(<GameSquare value="X" index={0} onClick={() => {}} disabled={true} />);
+    render(<GameSquare value="X" index={0} onClick={() => {}} disabled />);
 
     const square = screen.getByRole('button');
     expect(square).toHaveTextContent('X');
@@ -35,7 +35,7 @@ describe('GameSquare', () => {
 
   it('does not call the onClick function when the square is disabled', () => {
     const onClick = jest.fn();
-    render(<GameSquare value="X" index={0} onClick={onClick} disabled={true} />);
+    render(<GameSquare value="X" index={0} onClick={onClick} disabled />);
     fireEvent.click(screen.getByText('X'));
     expect(onClick).not.toHaveBeenCalled();
   });
