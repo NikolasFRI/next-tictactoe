@@ -1,37 +1,74 @@
-# Mantine Next.js template
+# Tic Tac Toe Game
 
-This is a template for [Next.js](https://nextjs.org/) app router + [Mantine](https://mantine.dev/).
-If you want to use pages router instead, see [next-pages-template](https://github.com/mantinedev/next-pages-template).
+A modern, interactive Tic Tac Toe game built for learning purposes with Next.js, TypeScript, and Mantine UI components. Features a clean, responsive design and comprehensive testing.
 
 ## Features
 
-This template comes with the following features:
+- **Modern UI**: Built with Mantine components
+- **Theming**: Light/dark theme toggle
+- **Clean design**: Game state management with React hooks
+- **Comprehensive Testing**: Full test coverage with Jest using React Testing Library
 
-- [PostCSS](https://postcss.org/) with [mantine-postcss-preset](https://mantine.dev/styles/postcss-preset)
-- [TypeScript](https://www.typescriptlang.org/)
-- [Storybook](https://storybook.js.org/)
-- [Jest](https://jestjs.io/) setup with [React Testing Library](https://testing-library.com/docs/react-testing-library/intro)
-- ESLint setup with [eslint-config-mantine](https://github.com/mantinedev/eslint-config-mantine)
+## Tech Stack
 
-## npm scripts
+- **Framework**: Next.js 15 with React 19
+- **Language**: TypeScript
+- **UI Library**: Mantine v8
+- **Testing**: Jest + React Testing Library
 
-### Build and dev scripts
+## Installation
 
-- `dev` – start dev server
-- `build` – bundle application for production
-- `analyze` – analyzes application bundle with [@next/bundle-analyzer](https://www.npmjs.com/package/@next/bundle-analyzer)
+1. **Install dependencies**
 
-### Testing scripts
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
 
-- `typecheck` – checks TypeScript types
-- `lint` – runs ESLint
-- `prettier:check` – checks files with Prettier
-- `jest` – runs jest tests
-- `jest:watch` – starts jest watch
-- `test` – runs `jest`, `prettier:check`, `lint` and `typecheck` scripts
+2. **Run the development server**
 
-### Other scripts
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   ```
 
-- `storybook` – starts storybook dev server
-- `storybook:build` – build production storybook bundle to `storybook-static`
-- `prettier:write` – formats all files with Prettier
+3. **Navigate to [http://localhost:3000]() to play**
+
+## Available Scripts
+
+### Development
+
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run analyze` - Analyze bundle size
+
+### Testing
+
+- `npm test` - Prettier, jest and lint
+- `npm run jest` - Run Jest tests only
+- `npm run jest:watch` - Run tests in watch mode
+- `npm run typecheck` - Check TypeScript types
+- `npm run lint` - Run ESLint
+
+### Code Quality
+
+- `npm run prettier:check` - Check code formatting
+- `npm run prettier:write` - Format code with Prettier
+
+## Project Structure
+
+```
+tictactoe/
+├── app/
+├── components/
+│   ├── Game/
+│   ├── Layout/
+│   └── UI/
+├── hooks/
+├── tests/
+│   └── integration/
+├── test-utils/
+└── theme.ts
+```
