@@ -8,7 +8,7 @@ import { render } from '@/test-utils/render';
 describe('Board', () => {
   afterEach(() => cleanup());
 
-  it('should display the value of the player the square when it is clicked', () => {
+  it('should display the value of the player inside the square when it is clicked', () => {
     render(<Board />);
     const squares = screen.getAllByTestId('square');
     fireEvent.click(squares[0]);
