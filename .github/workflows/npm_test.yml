@@ -1,13 +1,9 @@
 name: npm test
 
 on:
-  pull_request:
+  push:
     branches:
       - '**'
-
-concurrency:
-  group: ${{ github.workflow }}-${{ github.event.number || github.sha }}
-  cancel-in-progress: true
 
 jobs:
   test_pull_request:
@@ -17,10 +13,10 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version-file: '.nvmrc'
-          cache: 'yarn'
-          cache-dependency-path: '**/yarn.lock'
+          cache: 'npm'
+          cache-dependency-path: '**/package-lock.json'
       - name: Install dependencies
-        run: yarn
+        run: npm ci
       - name: Run build
         run: npm run build
       - name: Run tests
