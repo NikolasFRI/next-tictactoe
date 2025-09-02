@@ -40,6 +40,7 @@ export default function AboutPage() {
               <Text>• Responsive design with Mantine's AppShell layout</Text>
               <Text>• Light/dark theme toggle</Text>
               <Text>• Game state management with React hooks</Text>
+              <Text>• Full test integration with Jest</Text>
             </Stack>
           </Stack>
         </Stack>

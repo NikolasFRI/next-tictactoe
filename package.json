@@ -1,5 +1,5 @@
 {
-  "name": "mantine-next-template",
+  "name": "next-tic-tac-toe",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -32,8 +32,6 @@
     "@babel/core": "^7.27.4",
     "@eslint/js": "^9.29.0",
     "@ianvs/prettier-plugin-sort-imports": "^4.4.2",
-    "@storybook/nextjs": "^8.6.8",
-    "@storybook/react": "^8.6.8",
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.3.0",
@@ -53,13 +51,10 @@
     "postcss-preset-mantine": "1.17.0",
     "postcss-simple-vars": "^7.0.1",
     "prettier": "^3.5.3",
-    "storybook": "^8.6.8",
-    "storybook-dark-mode": "^4.0.2",
     "stylelint": "^16.20.0",
     "stylelint-config-standard-scss": "^15.0.1",
     "ts-jest": "^29.4.0",
     "typescript": "5.8.3",
     "typescript-eslint": "^8.34.0"
-  },
-  "packageManager": "yarn@4.9.3"
+  }
 }

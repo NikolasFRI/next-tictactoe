@@ -19,13 +19,14 @@ export function Board() {
 
         <Grid gutter="sm" columns={3} style={{ width: 300 }}>
           {Array.from({ length: 9 }).map((_, idx) => (
-            <GameSquare
-              key={idx}
-              value={squares[idx]}
-              index={idx}
-              onClick={takeTurn}
-              disabled={squares[idx] !== null || gameOver}
-            />
+            <Grid.Col key={idx} span={1}>
+              <GameSquare
+                value={squares[idx]}
+                index={idx}
+                onClick={takeTurn}
+                disabled={squares[idx] !== null || gameOver}
+              />
+            </Grid.Col>
           ))}
         </Grid>
 
