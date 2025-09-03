@@ -1,5 +1,6 @@
 # Tic Tac Toe Game
 
+![](screenshot.png)
 A modern, interactive Tic Tac Toe game built for learning purposes with Next.js, TypeScript, and Mantine UI components. Features a clean, responsive design and comprehensive testing.
 
 ## Features
